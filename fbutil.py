@@ -644,18 +644,18 @@ if __name__ == '__main__':
         print(g)
         print(db.get_generator_id(g[0]))
 
-    print("\n[procedure]"
+    print("\n[procedure]")
     ph, ps = db.procedures()
     for p in ps:
-        print(p[0]
+        print(p[0])
         q = db.procedure_source(p[0])
-        print(q['SOURCE']
-        print("\n[in_params]"
+        print(q['SOURCE'])
+        print("\n[in_params]")
         for inp in q['IN_PARAMS']:
-            print(inp['NAME'], fieldtype_to_string(inp)
-        print("\n[out_params]"
+            print(inp['NAME'], fieldtype_to_string(inp))
+        print("\n[out_params]")
         for outp in q['OUT_PARAMS']:
-            print(outp['NAME'], fieldtype_to_string(outp)
+            print(outp['NAME'], fieldtype_to_string(outp))
 
     print("\n[roles]")
     rh, rs = db.roles()
