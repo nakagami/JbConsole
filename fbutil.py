@@ -554,123 +554,121 @@ if __name__ == '__main__':
     else:
         testdir = tempfile.gettempdir()
         
-    print 'testdir=' + testdir
+    print('testdir=' + testdir)
 
     db = FbDatabase(host='localhost', path = testdir + '/test.fdb',
             user='sysdba', password='masterkey')
     db.open()
 
-    print "\n[domains]"
+    print("\n[domains]")
     h, d = db.domains()
-    print h
+    print(h)
     for r in d:
-        print r
+        print(r)
 
-    print "\n[exceptions]"
+    print("\n[exceptions]")
     h, d = db.exceptions()
-    print h
+    print(h)
     for r in d:
-        print r
+        print(r)
 
-    print "\n[system tables]"
+    print("\n[system tables]")
     h, d = db.tables(system_flag=1)
-    print h
+    print(h)
     for r in d:
-        print r
+        print(r)
 
 
-    print "\n[tables]"
+    print("\n[tables]")
     th, ts = db.tables()
-    print th
+    print(th)
     for t in ts:
-        print '\n', t
+        print('\n', t)
         h, cs = db.columns(t[0])
-        print '\t', h
-        print '\t',
+        print('\t', h)
+        print('\t',)
         for c in cs:
-            print '\t' + c[0] + ' ' + fieldtype_to_string(dict(zip(h, c))),
-            print c[1], c[2] # owner, description
-        print '\t[key_constraints_and_index:]\n',
+            print('\t' + c[0] + ' ' + fieldtype_to_string(dict(zip(h, c))),
+                                            c[1], c[2]) # owner, description
+        print('\t[key_constraints_and_index:]')
         for kcs in db.key_constraints_and_index(t[0]):
             for k in kcs:
-                print '\t'+k, kcs[k]
-            print '\n'
+                print('\t'+k, kcs[k])
+            print('\n')
                 
-        print '\t[check_constraints:]\n',
+        print('\t[check_constraints:]')
         for ccs in db.check_constraints(t[0]):
             for k in ccs:
-                print '\t'+k, ccs[k]
-        print '\n'
+                print('\t'+k, ccs[k])
+        print('\n')
 
-        print '\t[constraints:]\n',
+        print('\t[constraints:]')
         for cs in db.constraints(t[0]):
-            print cs
+            print(cs)
 
-        print '\t[primary_keys:]\n',
+        print('\t[primary_keys:]')
         for pk in db.primary_keys(t[0]):
-            print pk
+            print(pk)
 
-        print '\t[foreign_keys:]\n',
+        print('\t[foreign_keys:]')
         for fk in db.foreign_keys(t[0]):
-            print fk
+            print(fk)
 
-        print '\t[unique_keys:]\n',
+        print('\t[unique_keys:]')
         for uk in db.unique_keys(t[0]):
-            print uk
+            print(uk)
 
-        print '\n  triggers:',
+        print('\n  triggers:')
         h, cs = db.triggers(t[0])
-        print h
+        print(h)
         for c in cs:
-            print c
-            print db.trigger_source(c[0])
+            print(c)
+            print(db.trigger_source(c[0]))
 
-    print "\n[views]"
+    print("\n[views]")
     vh, vs = db.views()
-    print vh
+    print(vh)
     for v in vs:
-        print v
+        print(v)
         h, cs = db.columns(v[0])
-        print '\t', h
-        print '\t',
+        print('\t', h)
+        print('\t')
         for c in cs:
-            print '\t' + c[0] + ' ' + fieldtype_to_string(dict(zip(h, c))),
-            print c[1], c[2] # owner, description
-        print db.view_source(v[0])
+            print('\t' + c[0] + ' ' + fieldtype_to_string(dict(zip(h, c))),
+                                            c[1], c[2]) # owner, description
+        print(db.view_source(v[0]))
 
-    print "\n[generators]"
+    print("\n[generators]")
     gh, gs = db.generators()
     for g in gs:
-        print g,
-        print db.get_generator_id(g[0])
+        print(g)
+        print(db.get_generator_id(g[0]))
 
-    print "\n[procedure]"
+    print("\n[procedure]"
     ph, ps = db.procedures()
     for p in ps:
-        print p[0]
+        print(p[0]
         q = db.procedure_source(p[0])
-        print q['SOURCE']
-        print "\n[in_params]"
+        print(q['SOURCE']
+        print("\n[in_params]"
         for inp in q['IN_PARAMS']:
-            print inp['NAME'], fieldtype_to_string(inp)
-        print "\n[out_params]"
+            print(inp['NAME'], fieldtype_to_string(inp)
+        print("\n[out_params]"
         for outp in q['OUT_PARAMS']:
-            print outp['NAME'], fieldtype_to_string(outp)
+            print(outp['NAME'], fieldtype_to_string(outp)
 
-    print "\n[roles]"
+    print("\n[roles]")
     rh, rs = db.roles()
     for r in rs:
-        print r[0] + ' ' + r[1]
-        print "\t[grant_users]"
+        print(r[0] + ' ' + r[1])
+        print("\t[grant_users]")
         uh, us = db.grant_users(r[0])
-        print uh
+        print(uh)
         for u in us:
-            print u
+            print(u)
 
-    print "\n[functions]"
+    print("\n[functions]")
     fh, fs = db.functions()
-    print fh
+    print(fh)
     for f in fs:
-        print f
-
-
+        print(f)

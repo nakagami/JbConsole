@@ -857,7 +857,7 @@ if __name__=="__main__":
         from java.net import ServerSocket
         sock = ServerSocket(21535)
     except:
-        print APP_NAME, 'already running.'
+        print(' '.join([APP_NAME, 'already running.']))
         sys.exit()
     SwingUtilities.invokeLater(Application())
 
