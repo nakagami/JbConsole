@@ -29,7 +29,7 @@
 from java.lang import *
 from java.sql import *
 from java.util import Properties
-import org.firebirdsql.jdbc.FBDriver
+import org.firebirdsql.jdbc	# for driver loading
 
 
 def fieldtype_to_string(d, 
