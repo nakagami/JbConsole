@@ -14,3 +14,6 @@ How to work
 - fetch JbConsole
 
   - git clone git://github.com/nakagami/JbConsole.git
+
+- jython JbConsole.py
+
