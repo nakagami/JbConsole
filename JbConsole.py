@@ -1,6 +1,6 @@
 #!/usr/bin/env jython
 ##############################################################################
-# Copyright (c) 2009, Hajime Nakagami<nakagami@da2.so-net.ne.jp>
+# Copyright (c) 2009,2012 Hajime Nakagami<nakagami@gmail.com>
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without

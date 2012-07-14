@@ -1,5 +1,5 @@
 ##############################################################################
-# Copyright (c) 2009, Hajime Nakagami<nakagami@da2.so-net.ne.jp>
+# Copyright (c) 2009,2012 Hajime Nakagami<nakagami@gmail.com>
 # All rights reserved.
 # 
 # Redistribution and use in source and binary forms, with or without
@@ -29,8 +29,8 @@
 from java.lang import *
 from java.sql import *
 from java.util import Properties
-import org.firebirdsql.jdbc.FBDriver
 
+Class.forName("org.firebirdsql.jdbc.FBDriver")
 
 def fieldtype_to_string(d, 
     resolve_typename = True, with_null_flag = False, with_default = False):
