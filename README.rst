@@ -11,9 +11,10 @@ How to work
  
   - export CLASSPATH="$CLASSPATH:/some/where/jaybird-2.2.0.jar"
 
-- fetch JbConsole
+- Fetch JbConsole
 
   - git clone git://github.com/nakagami/JbConsole.git
 
-- jython JbConsole.py
+- Do command
 
+  - jython JbConsole.py
