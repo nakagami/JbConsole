@@ -1,19 +1,16 @@
-JbConsole
-=========
-
 JbConsole is a management tool for Firebird RDBMS (http://www.firebirdsql.org/).
 
 How to work
 --------------
 
-  - Download jython 2.5 (http://jython.org/)
+- Download jython 2.5 (http://jython.org/)
 
-  - Download Jaybird (Firebird JDBC driver ) http://www.firebirdsql.org/en/jdbc-driver/
+- Download Jaybird (Firebird JDBC driver ) http://www.firebirdsql.org/en/jdbc-driver/
 
-  - Set CLASSPATH to jaybird
+- Set CLASSPATH to jaybird
  
-    - export CLASSPATH="$CLASSPATH:/some/where/jaybird-2.2.0.jar"
+  - export CLASSPATH="$CLASSPATH:/some/where/jaybird-2.2.0.jar"
 
-  - fetch JbConsole
+- fetch JbConsole
 
-    - git clone git://github.com/nakagami/JbConsole.git
+  - git clone git://github.com/nakagami/JbConsole.git
