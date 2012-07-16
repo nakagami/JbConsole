@@ -9,7 +9,7 @@ How to work
 
 - Set CLASSPATH to jaybird
  
-  - export CLASSPATH="$CLASSPATH:/some/where/jaybird-full-2.1.6.jar"
+  - export CLASSPATH="$CLASSPATH:/some/where/jaybird-full-2.2.0.jar"
 
 - Fetch JbConsole
 
