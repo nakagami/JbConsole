@@ -39,7 +39,7 @@ from java.util.prefs import Preferences
 import fbutil
 
 APP_NAME = 'JbConsole'
-__version__ = '0.2.0'
+__version__ = '0.2.1'
 files = ('root', 'server', 'database', 'domain', 'object', 'function', 
     'generators', 'generator', 'procedures', 'procedure', 
     'systemtables', 'systemtable', 'tables', 'table', 
