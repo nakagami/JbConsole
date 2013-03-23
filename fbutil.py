@@ -115,7 +115,7 @@ class FbDatabase(object):
         md = rs.getMetaData()
         num_column = md.getColumnCount()
         for i in range(1, num_column+1):
-            cname.append(md.getColumnName(i))
+            cname.append(md.getColumnLabel(i))
 
         while rs.next():
             r = []
